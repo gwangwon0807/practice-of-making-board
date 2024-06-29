@@ -25,7 +25,7 @@ function saveInStorage(){
   window.localStorage.setItem('nick', nick);
   window.localStorage.setItem('passwd', passwd);
 
-  form.setAttribute('action', './signin.html');
+  form.setAttribute('action', './succes_signup.html');
 }
 
 //local storage에 있는 내용을 비교 알맞은 정보 입력시 해당 페이지로 이동
