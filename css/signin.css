@@ -1,0 +1,66 @@
+.nav{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav > h1{
+  font-size: 50px;
+}
+
+.section1, .section2{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_wrapper{
+  height: 100%;
+  width: 50%;
+}
+
+#email, #passwd, #login_btn, #signup_btn{
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.section_wrapper input{
+  width: 70%;
+  height: 70%;
+}
+
+#login_btn{
+  height: 20%;
+  margin-bottom: 1%;
+}
+
+#login_btn > button{
+  width: 71%;
+  height: 100%;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #4362D0;
+  cursor: pointer;
+}
+
+#signup_btn a{
+  color: blue;
+}
+
+#login_btn > button:hover{
+  background-color: black;
+}
+
+form{
+  width: 100%;
+  height: 100%;
+}
