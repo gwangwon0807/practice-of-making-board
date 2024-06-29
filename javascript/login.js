@@ -14,16 +14,18 @@ function saveInStorage(){
   let form = document.querySelector('form');
 
   let email = document.getElementById('eMail').value;
-  let id = document.getElementById('nick').value;
+  let nick = document.getElementById('nick').value;
   let passwd = document.getElementById('pw').value;
 
-  //if(!(check_sum(email, id, passwd))) return;
+  if(!(check_sum(email, nick, passwd))){
+    return 0;
+  }
 
   window.localStorage.setItem("email", email);
-  window.localStorage.setItem('nick', id);
+  window.localStorage.setItem('nick', nick);
   window.localStorage.setItem('passwd', passwd);
 
-  form.submit();
+  form.setAttribute('action', './signin.html');
 }
 
 //local storage에 있는 내용을 비교 알맞은 정보 입력시 해당 페이지로 이동
@@ -48,4 +50,27 @@ function check_info(){
   form.submit();
 }
 
-//function check_sum(email, nick, passwd){}
+function check_sum(email, nick, passwd){
+  // '@'가 포함 .ac.kr 도 가능하게끔
+  const check_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/;
+  
+  //영문자 시작 8글자 이하
+  const check_nick = /^[a-zA-Z][a-zA-Z0-9]{0,7}$/ 
+
+  //8~15까지 특수문자 반드시 필수
+  const check_passwd = /^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/
+
+  if(!(check_email.test(email))){
+    alert('이메일 형식이 잘못되었습니다.');
+    return 0;
+  }
+  else if(!(check_nick.test(nick))){
+    alert('닉네임은 8글자 이하 영어로 시작하고 특수문자 없이 작성해주세요');
+    return 0;
+  }
+  else if(!(check_passwd.test(passwd))){
+    alert('비밀번호는 8 ~ 15 글자 사이 특수문자가 들어가도록 작성해주세요');
+    return 0;
+  }
+  return 1;
+}
