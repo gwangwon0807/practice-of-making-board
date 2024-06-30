@@ -1,14 +1,3 @@
-//이메일, 아이디, 비밀번호 value 지워줌 -> 비밀번호의 경우 type = text -> password로 변경
-function remove_origin_val(target){
-  target.value = "";
-  target.onclick ="";
-
-  if(target.id == "pw")
-    {
-      target.type = "password";
-    }
-}
-
 //회원가입 작성한 email, nickname, password를 local storage에 추가
 function saveInStorage(){
   let form = document.querySelector('form');
@@ -17,9 +6,7 @@ function saveInStorage(){
   let nick = document.getElementById('nick').value;
   let passwd = document.getElementById('pw').value;
 
-  if(!(check_sum(email, nick, passwd))){
-    return 0;
-  }
+  if(!(check_sum(email, nick, passwd))){return 0;}
 
   window.localStorage.setItem("email", email);
   window.localStorage.setItem('nick', nick);
@@ -47,9 +34,11 @@ function check_info(){
     return;
   }
 
-  form.submit();
+  form.setAttribute('action', '../member/member_main.html');
 }
 
+
+//정규식
 function check_sum(email, nick, passwd){
   // '@'가 포함 .ac.kr 도 가능하게끔
   const check_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$/;

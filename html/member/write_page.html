@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/writepage.css">
+
+  <script defer src="../../javascript/create.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div id="hello"><h1><a href="./member_main.html" style="color: black;">Hello world!</a></h1></div>
+    <div class="header_right" id="log_out"><a href="../non_member/signin.html">로그아웃</a></div>
+    <div class="header_right" id="my_page"><a href="#">마이페이지</a></div>
+    <div class="header_right" id="member_list"><a href="#">멤버리스트</a></div>
+  </header>
+  <nav class="nav">글쓰기</nav>
+  <article class="article">
+    <section class="section"><input id="title" type="text" placeholder="제목을 입력하세요"></section>
+    <section class="section"><textarea id="content" placeholder="내용을 입력하세요"></textarea></section>
+  </article>
+  <footer class="footer">
+    <div><button class="write_btn" onclick="create_list()">작성 완료</button></div>
+  </footer>
+</body>
+</html>

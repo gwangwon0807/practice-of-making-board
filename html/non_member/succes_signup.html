@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/signin.css">
+
+  <script defer src="../../javascript/login.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div id="hello"><h1><a href="../../index.html" style="color: black;">Hello world!</a></h1></div>
+    <div class="header_right"><a href="./signin.html">로그인/회원가입</a></div>
+  </header>
+  <nav class="nav"><h1>회원가입을 축하드립니다.</h1></nav>
+  <form action="../member/member_main.html" name="login_info">
+    <section class="section1">
+      <div class="section_wrapper">
+        <article id="email">
+          <input id="eMail" type="email" placeholder="이메일" name="email">
+        </article>
+        <article id="passwd">
+          <input id="pw" type="password" name="passwd" placeholder="비밀번호">
+        </article>
+      </div>
+    </section>
+    <section class="section2">
+      <div class="section_wrapper">
+        <article id="login_btn">
+          <button onclick="check_info()">로그인</button>
+        </article>
+    </div>
+    </section>
+  </form>
+</body>
+</html>

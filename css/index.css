@@ -16,3 +16,35 @@
   font-weight: 200;
   padding-bottom: 7px;
 }
+
+.section{
+  width: 100%;
+  height: 60%;
+  margin-top: 3%;
+}
+
+.section .board_header{
+  height: 4%;
+  font-weight: 200;
+  color: grey;
+  padding: 15px 0;
+  border-bottom: 0.1px solid grey;
+}
+
+.board_header > div{
+  width: 15%;
+  float: left;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board_header:nth-child(2) > div:nth-child(1){
+  width: 55%;
+}
+
+.footer {
+  display: flex;
+  justify-content: end;
+}
