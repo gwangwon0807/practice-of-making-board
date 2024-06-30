@@ -16,7 +16,7 @@
     <div class="header_right"><a href="./signin.html">로그인/회원가입</a></div>
   </header>
   <nav class="nav"><h1>로그인</h1></nav>
-  <form name="login_info">
+  <form action="../member/member_main.html" name="login_info">
     <section class="section1">
       <div class="section_wrapper">
         <article id="email">
@@ -30,7 +30,7 @@
     <section class="section2">
       <div class="section_wrapper">
         <article id="login_btn">
-          <button onclick="check_info()">로그인</button>
+          <button type="submit" onclick="check_info(event)">로그인</button>
         </article>
         <article id="signup_btn">
           <h1>아직 회원가입을 안하셧나요? <a href="./signup.html">회원가입하기</a></h1>

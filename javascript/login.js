@@ -1,5 +1,6 @@
 //회원가입 작성한 email, nickname, password를 local storage에 추가
-function saveInStorage(){
+function saveInStorage(e){
+  e.preventDefault();
   let form = document.querySelector('form');
 
   let email = document.getElementById('eMail').value;
@@ -12,11 +13,12 @@ function saveInStorage(){
   window.localStorage.setItem('nick', nick);
   window.localStorage.setItem('passwd', passwd);
 
-  form.setAttribute('action', './succes_signup.html');
+  form.submit();
 }
 
 //local storage에 있는 내용을 비교 알맞은 정보 입력시 해당 페이지로 이동
-function check_info(){
+function check_info(e){
+  e.preventDefault();
   let form = document.querySelector('form');
 
   let input_email = document.getElementById('eMail').value;
@@ -33,8 +35,8 @@ function check_info(){
     alert('비밀번호가 다릅니다');
     return;
   }
-
-  form.setAttribute('action', '../member/member_main.html');
+  
+  form.submit();
 }
 
 

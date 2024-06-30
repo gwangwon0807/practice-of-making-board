@@ -16,7 +16,7 @@
     <div class="header_right"><a href="./signin.html">로그인/회원가입</a></div>
   </header>
   <nav class="nav"><h1>회원가입</h1></nav>
-  <form>
+  <form action="./succes_signup.html">
     <section class="section">
       <div class="section_wrapper">
         <article id="email">
@@ -29,7 +29,7 @@
           <input id="pw" type="password" placeholder="비밀번호">
         </article>
         <article id="signup_btn">
-          <button onclick="saveInStorage()">회원가입</button>
+          <button type="submit" onclick="saveInStorage(event)">회원가입</button>
         </article>
       </div>
     </section>
